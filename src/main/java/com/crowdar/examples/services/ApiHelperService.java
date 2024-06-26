@@ -6,6 +6,7 @@ import io.restassured.response.Response;
 public class ApiHelperService {
 
     static String key = PropertyManager.getProperty("x-api-key");
+    static String baseUrl = PropertyManager.getProperty("base.url");
 
     public static Response sendPostRequest(String url, String body) {
         return RestAssured
@@ -30,10 +31,10 @@ public class ApiHelperService {
                 .given()
                 .header("Content-Type", "application/json")
                 .header("x-api-key", key)
-                .get(url);
+                .get("/workspaces");
     }
 
-    public static Response sendDeleteRequest(String url) {
+    public static Response sendDeleteRequest() {
         return RestAssured
                 .given()
                 .header("Content-Type", "application/json")
