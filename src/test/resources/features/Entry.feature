@@ -16,7 +16,7 @@ Feature: Generar una entrada de datos en Clockify
       | 08      | TPFinal     |
 
   @DateEntry @Smoke
-  Scenario Outline: Crear una entrada en la app de Clockify
+  Scenario Outline: Elegir una fecha de entrada en la app de Clockify
     Given el usuario abre la app
     When el usuario inicia sesion con mail y contraseña
     And selecciona crear nuevo proyecto
@@ -31,7 +31,7 @@ Feature: Generar una entrada de datos en Clockify
       | 08      | TPFinal     | 23    |
 
   @CancelEntry @Smoke
-  Scenario Outline: Crear una entrada en la app de Clockify
+  Scenario Outline: Crear y cancelar una entrada en la app de Clockify
     Given el usuario abre la app
     When el usuario inicia sesion con mail y contraseña
     And selecciona crear nuevo proyecto
